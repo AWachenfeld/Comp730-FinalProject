@@ -31,3 +31,14 @@ def subscriptions_owned():
     {result["3_owned"]} Users own 3 subscriptions,
     {result["2_owned"]} Users own 2 subscriptions, and
     {result["1_owned"]} Users own only 1 subscription.\n""")
+
+
+def contract_renewal():
+    input1 = './data/telecom_users.txt'
+    devs_obj = Contractrenewal(input1)
+    result = devs_obj.contract_renewal()
+    print(f"""Based on a users seniority these are the renewals and cancelations!
+    {result["Senior_renew"]} Seniors will renew their contract,
+    {result["Senior_cancel"]} senior will cancel their contract,
+    {result["NonSenior_renew"]} Nonseniors will renew their contract, and
+    {result["NonSenior_cancel"]} Nonseniors will cancel their contract.""")
