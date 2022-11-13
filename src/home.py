@@ -20,11 +20,11 @@ def main():
     choice = input("")
     if (choice == "1"):
         telecom_main()
-    elif (choice == "2"):
+    #elif (choice == "2"):
 
-    elif (choice == "3"):
+    #elif (choice == "3"):
         #cars_main()
-    elif (choice == "4"):
+    #elif (choice == "4"):
         #fantasy_main()
     else:
         print("You choice was not valid. Exiting Process.")
