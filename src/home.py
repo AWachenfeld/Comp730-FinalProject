@@ -18,7 +18,7 @@ def main():
     3: Car Sales
     4: Fantasy Football
     5: Exit Program""")
-    choice = input("Choose a number:")
+    choice = input("Choose a number: ")
     if (choice == "1"):
         telecom_main()
     #elif (choice == "2"):
