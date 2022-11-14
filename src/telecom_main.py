@@ -15,6 +15,7 @@ def telecom_main():
     2: Contract renewals
     3: Exit Program""")
     telecom_choice = input("Enter num choice: ")
+
     if (telecom_choice == "1"):
         print(f"""What subscription amount would you like to see:
         1: 3 Subscriptions Owned
@@ -30,18 +31,20 @@ def telecom_main():
         else:
             print("You choice was not valid. Returning to Telecom options menu.\n")
             telecom_main()
+
     elif (telecom_choice == "2"):
         print(f"""Would you like to see contract renewals for seniors or non-seniors?:
         1: Seniors
         2: non-Seniors""")
         renewal_choice = input("Enter choice: ")
-        if (subscription_choice == "1"):
+        if (renewal_choice == "1"):
             contract_renewal(renewal_choice)
-        elif (subscription_choice == "2"):
+        elif (renewal_choice == "2"):
             contract_renewal(renewal_choice)
         else:
             print("You choice was not valid. Returning to Telecom options menu.\n")
             telecom_main()
+
     elif (telecom_choice == "3"):
         print("Thank You, Goodbye!")
         exit()
@@ -62,12 +65,15 @@ def subscriptions_owned(choice):
         print(f"""{result["1_owned"]} Users own only 1 subscription.\n""")
 
 
-def contract_renewal():
+def contract_renewal(choice):
     input1 = './data/telecom_users.txt'
     devs_obj = Contractrenewal(input1)
     result = devs_obj.contract_renewal()
-    print(f"""Based on a users seniority these are the renewals and cancelations!
-    {result["Senior_renew"]} Seniors will renew their contract,
-    {result["Senior_cancel"]} senior will cancel their contract,
-    {result["NonSenior_renew"]} Nonseniors will renew their contract, and
-    {result["NonSenior_cancel"]} Nonseniors will cancel their contract.\n""")
+    if (choice == "1"):
+        print(f"""
+        {result["Senior_renew"]} Seniors will renew their contract,
+        {result["Senior_cancel"]} senior will cancel their contract.""")
+    elif (choice == "2"):
+        print(f"""
+        {result["NonSenior_renew"]} Nonseniors will renew their contract,
+        {result["NonSenior_cancel"]} Nonseniors will cancel their contract.""")
