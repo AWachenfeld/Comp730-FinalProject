@@ -9,8 +9,7 @@ sys.path.insert(
 )
 
 def telecom_main():
-    print("You chose Telecom user data")
-    print(f"""Choose what you would like to see:
+    print(f"""\nChoose what Telecom user data you would like to see:
     1: Subscriptions owned by users
     2: Contract renewals
     3: Exit Program""")
@@ -58,11 +57,11 @@ def subscriptions_owned(choice):
     devs_obj = Subscriptions(input1)
     result = devs_obj.subscriptions_owned()
     if (choice == "1"):
-        print(f"""{result["3_owned"]} Users own 3 subscriptions.\n""")
+        print(f"""\n{result["3_owned"]} Users own 3 subscriptions.\n""")
     elif (choice == "2"):
-        print(f"""{result["2_owned"]} Users own 2 subscriptions.\n""")
+        print(f"""\n{result["2_owned"]} Users own 2 subscriptions.\n""")
     elif (choice == "3"):
-        print(f"""{result["1_owned"]} Users own only 1 subscription.\n""")
+        print(f"""\n{result["1_owned"]} Users own only 1 subscription.\n""")
 
 
 def contract_renewal(choice):
@@ -70,10 +69,8 @@ def contract_renewal(choice):
     devs_obj = Contractrenewal(input1)
     result = devs_obj.contract_renewal()
     if (choice == "1"):
-        print(f"""
-        {result["Senior_renew"]} Seniors will renew their contract,
-        {result["Senior_cancel"]} senior will cancel their contract.""")
+        print(f"""\n{result["Senior_renew"]} Seniors will renew their contract,""")
+        print(f"""{result["Senior_cancel"]} senior will cancel their contract.\n""")
     elif (choice == "2"):
-        print(f"""
-        {result["NonSenior_renew"]} Nonseniors will renew their contract,
-        {result["NonSenior_cancel"]} Nonseniors will cancel their contract.""")
+        print(f"""\n{result["NonSenior_renew"]} Seniors will renew their contract,""")
+        print(f"""{result["NonSenior_cancel"]} senior will cancel their contract.\n""")
