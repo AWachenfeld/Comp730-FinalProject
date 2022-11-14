@@ -47,7 +47,7 @@ def telecom_main():
 
     elif (telecom_choice == "3"):
         print("Thank You, Goodbye!")
-        exit()
+        sys.exit()
     else:
         print("You choice was not valid. Please select from the list.\n")
         telecom_main()
