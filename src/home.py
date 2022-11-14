@@ -1,6 +1,7 @@
 import os
 import sys
 from telecom_main import telecom_main
+from fantasy import fantasy_main
 
 #from cars_main import cars_main
 #from fantasy_main import fantasy_main
@@ -21,12 +22,12 @@ def main():
     choice = input("Choose a number: ")
     if (choice == "1"):
         telecom_main()
-    #elif (choice == "2"):
-
-    #elif (choice == "3"):
-        #cars_main()
-    #elif (choice == "4"):
-        #fantasy_main()
+    elif (choice == "2"):
+        pass
+    elif (choice == "3"):
+        pass
+    elif (choice == "4"):
+        fantasy_main()
     elif (choice == "5"):
         print("Thank You, Goodbye!")
         sys.exit()
