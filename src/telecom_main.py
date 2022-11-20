@@ -3,6 +3,7 @@ import sys
 from telecom_translate import Subscriptions
 from telecom_translate import Contractrenewal
 from telecom_translate import Monthlycharges
+from telecom_translate import Tenure
 
 sys.path.insert(
     0,
@@ -14,6 +15,7 @@ def telecom_main():
     1: Subscriptions owned by users
     2: Contract renewals
     3: Monthly charges avg
+    4: Tenure avg (months)
     4: Exit Program""")
     telecom_choice = input("Enter num choice: ")
 
@@ -51,6 +53,10 @@ def telecom_main():
         telecom_main()
 
     elif (telecom_choice == "4"):
+        tenure_avg()
+        telecom_main()
+
+    elif (telecom_choice == "5"):
         print("Thank You, Goodbye!")
         sys.exit()
     else:
