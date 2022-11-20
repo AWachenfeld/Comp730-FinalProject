@@ -2,17 +2,19 @@ import os
 import sys
 from telecom_translate import Subscriptions
 from telecom_translate import Contractrenewal
+from telecom_translate import Monthlycharges
 
 sys.path.insert(
     0,
-    os.path.abspath(os.path.join(os.path.dirname(__file__), "."))
+    os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 )
 
 def telecom_main():
     print(f"""\nChoose what Telecom user data you would like to see:
     1: Subscriptions owned by users
     2: Contract renewals
-    3: Exit Program""")
+    3: Monthly charges avg
+    4: Exit Program""")
     telecom_choice = input("Enter num choice: ")
 
     if (telecom_choice == "1"):
@@ -45,6 +47,10 @@ def telecom_main():
             telecom_main()
 
     elif (telecom_choice == "3"):
+        monthly_charges()
+        telecom_main()
+
+    elif (telecom_choice == "4"):
         print("Thank You, Goodbye!")
         sys.exit()
     else:
@@ -53,7 +59,7 @@ def telecom_main():
 
 
 def subscriptions_owned(choice):
-    input1 = './data/telecom_users.txt'
+    input1 = '../data/telecom_users.txt'
     devs_obj = Subscriptions(input1)
     result = devs_obj.subscriptions_owned()
     if (choice == "1"):
@@ -65,7 +71,7 @@ def subscriptions_owned(choice):
 
 
 def contract_renewal(choice):
-    input1 = './data/telecom_users.txt'
+    input1 = '../data/telecom_users.txt'
     devs_obj = Contractrenewal(input1)
     result = devs_obj.contract_renewal()
     if (choice == "1"):
@@ -74,3 +80,10 @@ def contract_renewal(choice):
     elif (choice == "2"):
         print(f"""\n{result["NonSenior_renew"]} NonSeniors will renew their contract,""")
         print(f"""{result["NonSenior_cancel"]} Nonsenior will cancel their contract.\n""")
+
+def monthly_charges():
+    input1 = '../data/telecom_users.txt'
+    devs_obj = Monthlycharges(input1)
+    result = devs_obj.monthly_charges()
+    print(f"""\nFor {result["Senior_total"]} Seniors their avg monthly charges are ${result["Senior_charges"]},""")
+    print(f"""For {result["NonSenior_total"]} NonSeniors their avg monthly charges are ${result["NonSenior_charges"]}.\n""")
