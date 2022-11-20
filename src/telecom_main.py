@@ -72,5 +72,5 @@ def contract_renewal(choice):
         print(f"""\n{result["Senior_renew"]} Seniors will renew their contract,""")
         print(f"""{result["Senior_cancel"]} senior will cancel their contract.\n""")
     elif (choice == "2"):
-        print(f"""\n{result["NonSenior_renew"]} Seniors will renew their contract,""")
-        print(f"""{result["NonSenior_cancel"]} senior will cancel their contract.\n""")
+        print(f"""\n{result["NonSenior_renew"]} NonSeniors will renew their contract,""")
+        print(f"""{result["NonSenior_cancel"]} Nonsenior will cancel their contract.\n""")
