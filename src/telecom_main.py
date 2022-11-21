@@ -16,7 +16,7 @@ def telecom_main():
     2: Contract renewals
     3: Monthly charges avg
     4: Tenure avg (months)
-    5: Exit Program""")
+    5: Exit Dataset """)
     telecom_choice = input("Enter num choice: ")
 
     if (telecom_choice == "1"):
@@ -27,10 +27,13 @@ def telecom_main():
         subscription_choice = input("Enter choice: ")
         if (subscription_choice == "1"):
             subscriptions_owned(subscription_choice)
+            telecom_main()
         elif (subscription_choice == "2"):
             subscriptions_owned(subscription_choice)
+            telecom_main()
         elif (subscription_choice == "3"):
             subscriptions_owned(subscription_choice)
+            telecom_main()
         else:
             print("You choice was not valid. Returning to Telecom options menu.\n")
             telecom_main()
@@ -42,8 +45,10 @@ def telecom_main():
         renewal_choice = input("Enter choice: ")
         if (renewal_choice == "1"):
             contract_renewal(renewal_choice)
+            telecom_main()
         elif (renewal_choice == "2"):
             contract_renewal(renewal_choice)
+            telecom_main()
         else:
             print("You choice was not valid. Returning to Telecom options menu.\n")
             telecom_main()
@@ -57,8 +62,7 @@ def telecom_main():
         telecom_main()
 
     elif (telecom_choice == "5"):
-        print("Thank You, Goodbye!")
-        sys.exit()
+        print("Thank You for using Telecom Dataset\n")
     else:
         print("You choice was not valid. Please select from the list.\n")
         telecom_main()
