@@ -16,7 +16,7 @@ def telecom_main():
     2: Contract renewals
     3: Monthly charges avg
     4: Tenure avg (months)
-    4: Exit Program""")
+    5: Exit Program""")
     telecom_choice = input("Enter num choice: ")
 
     if (telecom_choice == "1"):
@@ -93,3 +93,10 @@ def monthly_charges():
     result = devs_obj.monthly_charges()
     print(f"""\nFor {result["Senior_total"]} Seniors their avg monthly charges are ${result["Senior_charges"]},""")
     print(f"""For {result["NonSenior_total"]} NonSeniors their avg monthly charges are ${result["NonSenior_charges"]}.\n""")
+
+def tenure_avg():
+    input1 = '../data/telecom_users.txt'
+    devs_obj = Tenure(input1)
+    result = devs_obj.tenure_avg()
+    print(f"""\nBased on {result["Senior_total"]} Seniors their avg teunre is {result["Senior_months"]} months,""")
+    print(f"""Based on {result["NonSenior_total"]} NonSeniors their avg tenure is {result["NonSenior_months"]} months.\n""")
