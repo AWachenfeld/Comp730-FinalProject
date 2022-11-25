@@ -8,4 +8,4 @@
 4693|0463-TXOAK|Male|0|No|Yes|52|Yes|Yes|No|No internet service|No internet service|No internet service|No internet service|No internet service|No internet service|Two year|No|Credit card (automatic)|25.6|1334.5|No
 3393|4683-WYDOU|Male|0|Yes|No|62|Yes|Yes|Fiber optic|No|No|Yes|Yes|Yes|Yes|Two year|Yes|Bank transfer (automatic)|107.6|6912.7|No
 4201|1166-PQLGG|Female|0|Yes|Yes|72|Yes|No|No|No internet service|No internet service|No internet service|No internet service|No internet service|No internet service|Two year|No|Bank transfer (automatic)|19.55|1463.45|No
-3550|0963-ZBDRN|Male|0|No|No|32|Yes|No|Fiber optic|No|No|No|Yes|Yes|Yes|Month-to-month|Yes|Electronic check|96.2|3183.4|Yes
+4335|9208-OLGAQ|Female|1|No|No|18|Yes|No|Fiber optic|No|No|Yes|No|No|Yes|Month-to-month|Yes|Electronic check|84.95|1443.65|No
