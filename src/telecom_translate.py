@@ -73,12 +73,12 @@ class Contractrenewal():
             senior_status = user.get("SeniorCitizen")
             cancel = user.get("Churn")
             if senior_status == "1":
-                if cancel == "No":
+                if cancel == "Yes":
                     contract_status_d["Senior_renew"] += 1
                 else:
                     contract_status_d["Senior_cancel"] += 1
             else:
-                if cancel == "No":
+                if cancel == "Yes":
                     contract_status_d["NonSenior_renew"] += 1
                 else:
                     contract_status_d["NonSenior_cancel"] += 1
