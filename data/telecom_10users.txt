@@ -1,0 +1,11 @@
+#|customerID|gender|SeniorCitizen|Partner|Dependents|tenure|PhoneService|MultipleLines|InternetService|OnlineSecurity|OnlineBackup|DeviceProtection|TechSupport|StreamingTV|StreamingMovies|Contract|PaperlessBilling|PaymentMethod|MonthlyCharges|TotalCharges|Churn
+604|2731-GJRDG|Female|0|No|No|32|Yes|Yes|Fiber optic|Yes|No|Yes|Yes|Yes|Yes|One year|Yes|Bank transfer (automatic)|109.55|3608|No
+2157|1784-EZDKJ|Male|0|Yes|No|51|Yes|Yes|Fiber optic|No|Yes|Yes|No|Yes|Yes|One year|Yes|Bank transfer (automatic)|106.8|5498.8|No
+3132|2468-SJFLM|Male|0|No|No|1|Yes|No|Fiber optic|No|No|No|Yes|No|No|Month-to-month|Yes|Mailed check|74.3|74.3|No
+6765|5115-SQAAU|Female|0|Yes|Yes|69|Yes|Yes|No|No internet service|No internet service|No internet service|No internet service|No internet service|No internet service|Two year|Yes|Bank transfer (automatic)|25.6|1673.4|No
+6508|8708-XPXHZ|Female|0|Yes|Yes|42|Yes|Yes|Fiber optic|No|No|No|No|Yes|Yes|Month-to-month|Yes|Electronic check|94.2|4186.3|Yes
+5636|0601-WZHJF|Male|0|Yes|No|14|No|No|DSL|No|No|No|No|Yes|Yes|Month-to-month|No|Electronic check|46.35|667.7|Yes
+4693|0463-TXOAK|Male|0|No|Yes|52|Yes|Yes|No|No internet service|No internet service|No internet service|No internet service|No internet service|No internet service|Two year|No|Credit card (automatic)|25.6|1334.5|No
+3393|4683-WYDOU|Male|0|Yes|No|62|Yes|Yes|Fiber optic|No|No|Yes|Yes|Yes|Yes|Two year|Yes|Bank transfer (automatic)|107.6|6912.7|No
+4201|1166-PQLGG|Female|0|Yes|Yes|72|Yes|No|No|No internet service|No internet service|No internet service|No internet service|No internet service|No internet service|Two year|No|Bank transfer (automatic)|19.55|1463.45|No
+4335|9208-OLGAQ|Female|1|No|No|18|Yes|No|Fiber optic|No|No|Yes|No|No|Yes|Month-to-month|Yes|Electronic check|84.95|1443.65|No
