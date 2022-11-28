@@ -37,7 +37,8 @@ def fantasy_main():
     elif(choice == "4"):
         games_injured()
     else:
-        print(choice)
+        print("Invalid option please choose an option listed above")
+        fantasy_main()
 
 def top_players_overall():
     #print("\nPlease choose number of players to display")
@@ -56,6 +57,9 @@ def top_players_overall():
         print(df.head(50))
     elif(num_players == "4"):
         print(df.head(100))
+    else:
+        print("Invalid option please choose an option listed above")
+        top_players_overall()
 
 def top_position_overall():
     print(f"""\n Please choose your position
@@ -90,6 +94,9 @@ def top_position_overall():
             print(qb.head(20))
         elif(player_count == "4"):
             print(qb.head(50))
+        else:
+            print("Invalid option please choose an option listed above")
+            top_position_overall()
 
     if(position == "2"):
         print(f"""\n How many players would you like to view?
@@ -111,6 +118,9 @@ def top_position_overall():
             print(rb.head(20))
         elif(player_count == "4"):
             print(rb.head(50))
+        else:
+            print("Invalid option please choose an option listed above")
+            top_position_overall()
 
     if(position == "3"):
         print(f"""\n How many players would you like to view?
@@ -132,6 +142,9 @@ def top_position_overall():
             print(wr.head(20))
         elif(player_count == "4"):
             print(wr.head(50))
+        else:
+            print("Invalid option please choose an option listed above")
+            top_position_overall()
 
     if(position == "4"):
         print(f"""\n How many players would you like to view?
@@ -153,6 +166,9 @@ def top_position_overall():
             print(te.head(20))
         elif(player_count == "4"):
             print(te.head(50))
+        else:
+            print("Invalid option please choose an option listed above")
+            top_position_overall()
 
 def select_by_team():
     print(f""" Select a team:
@@ -160,7 +176,19 @@ def select_by_team():
     'PIT' 'ARI' 'TEN' 'LV' 'MIA' 'SEA' 'CAR' 'NO' 'ATL' 'HOU' 'WAS' 'DET'
     'NE' 'CHI' 'CLE' 'DEN' 'JAX' 'NYG' 'NYJ'""")
     team = input("Select team: ")
-    print(df.loc[df['Team'] == team.upper()])
+
+    team_valid = False
+    teams = ['LAR', 'BUF', 'LAC', 'TB', 'IND', 'KC', 'GB', 'SF', 'MIN', 'DAL', 'CIN', 'PHI', 'BAL', 'PIT', 'ARI', 'TEN', 'LV', 'MIA', 'SEA', 'CAR', 'NO', 'ATL', 'HOU', 'WAS', 'DET', 'NE', 'CHI', 'CLE', 'DEN', 'JAX', 'NYG', 'NYJ']
+
+    for i in  range(len(teams)):
+        if (teams[i] == team.upper()):
+            team_valid = True
+            print(df.loc[df['Team'] == team.upper()])
+            break
+            
+    if(team_valid == False):
+        print("Invalid team choice")
+        select_by_team()
  
 def games_injured():
     print(f"""\n Choose players based off amount of games they played
@@ -182,6 +210,9 @@ def games_injured():
     if(games == "4"):
         least = df.loc[df['Played'] < 10]
         print(least)
+    else:
+        print("Invalid option please choose an option listed above")
+        games_injured()
 
 #if __name__ == '__main__':
 #    fantasy_main()
