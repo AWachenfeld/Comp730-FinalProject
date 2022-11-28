@@ -14,6 +14,8 @@ df = df.drop('Sacks', axis=1)
 df = df.drop('Interceptions', axis=1)
 df = df.drop('FumblesForced', axis=1)
 df = df.drop('FumblesRecovered', axis=1)
+points = df[ (df['FantasyPointsPPR'] < 100)].index
+df.drop(points , inplace=True)
 #pd.set_option('display.max_columns', 500)
 
 
@@ -61,7 +63,12 @@ def top_position_overall():
     2. RB
     3. WR
     4. TE""")
-    position = input("Select option: ")
+    position = input("")
+
+    qb = df.loc[df['Position'] == "QB"]
+    rb = df.loc[df['Position'] == "RB"]
+    wr = df.loc[df['Position'] == "WR"]
+    te = df.loc[df['Position'] == "TE"]
 
     if(position == "1"):
         print(f"""\n How many players would you like to view?
@@ -69,18 +76,19 @@ def top_position_overall():
         2. Top 10
         3. Top 20
         4. Top 50""")
-        player_count = input("Select option: ")
+        player_count = input("")
+
+        qb = qb.drop('Receptions', axis=1)
+        qb = qb.drop('ReceivingYards', axis=1)
+        qb = qb.drop('ReceivingTouchdowns', axis=1)
+
         if(player_count == "1"):
-            qb = df.loc[df['Position'] == "QB"]
             print(qb.head(5))
         elif(player_count == "2"):
-            qb = df.loc[df['Position'] == "QB"]
             print(qb.head(10))
         elif(player_count == "3"):
-            qb = df.loc[df['Position'] == "QB"]
             print(qb.head(20))
         elif(player_count == "4"):
-            qb = df.loc[df['Position'] == "QB"]
             print(qb.head(50))
 
     if(position == "2"):
@@ -89,18 +97,19 @@ def top_position_overall():
         2. Top 10
         3. Top 20
         4. Top 50""")
-        player_count = input("Select option: ")
+        player_count = input("")
+
+        rb = rb.drop('PassingYards', axis=1)
+        rb = rb.drop('PassingTouchdowns', axis=1)
+        rb = rb.drop('PassingInterceptions', axis=1)
+
         if(player_count == "1"):
-            rb = df.loc[df['Position'] == "RB"]
             print(rb.head(5))
         elif(player_count == "2"):
-            rb = df.loc[df['Position'] == "RB"]
             print(rb.head(10))
         elif(player_count == "3"):
-            rb = df.loc[df['Position'] == "RB"]
             print(rb.head(20))
         elif(player_count == "4"):
-            rb = df.loc[df['Position'] == "RB"]
             print(rb.head(50))
 
     if(position == "3"):
@@ -109,18 +118,19 @@ def top_position_overall():
         2. Top 10
         3. Top 20
         4. Top 50""")
-        player_count = input("Select option: ")
+        player_count = input("")
+
+        wr = wr.drop('PassingYards', axis=1)
+        wr = wr.drop('PassingTouchdowns', axis=1)
+        wr = wr.drop('PassingInterceptions', axis=1)
+
         if(player_count == "1"):
-            wr = df.loc[df['Position'] == "WR"]
             print(wr.head(5))
         elif(player_count == "2"):
-            wr = df.loc[df['Position'] == "WR"]
             print(wr.head(10))
         elif(player_count == "3"):
-            wr = df.loc[df['Position'] == "WR"]
             print(wr.head(20))
         elif(player_count == "4"):
-            wr = df.loc[df['Position'] == "WR"]
             print(wr.head(50))
 
     if(position == "4"):
@@ -129,18 +139,19 @@ def top_position_overall():
         2. Top 10
         3. Top 20
         4. Top 50""")
-        player_count = input("Select option: ")
+        player_count = input("")
+
+        te = te.drop('PassingYards', axis=1)
+        te = te.drop('PassingTouchdowns', axis=1)
+        te = te.drop('PassingInterceptions', axis=1)
+
         if(player_count == "1"):
-            te = df.loc[df['Position'] == "TE"]
             print(te.head(5))
         elif(player_count == "2"):
-            te = df.loc[df['Position'] == "TE"]
             print(te.head(10))
         elif(player_count == "3"):
-            te = df.loc[df['Position'] == "TE"]
             print(te.head(20))
         elif(player_count == "4"):
-            te = df.loc[df['Position'] == "TE"]
             print(te.head(50))
 
 def select_by_team():
@@ -161,10 +172,10 @@ def games_injured():
 
     if(games == "1"):
         all = df.loc[df['Played'] == 17]
-        print(all)
+        print(all.head(50))
     if(games == "2"):
         most = df.loc[df['Played'].isin([14, 15, 16])]
-        print(most)
+        print(most.head(50))
     if(games == "3"):
         many = df.loc[df['Played'].isin([10, 11, 12, 13])]
         print(many)
