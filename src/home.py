@@ -2,6 +2,7 @@ import os
 import sys
 from telecom_main import telecom_main
 from fantasy import fantasy_main
+from gpu_home import gpu_main
 
 #from cars_main import cars_main
 #from fantasy_main import fantasy_main
@@ -15,7 +16,7 @@ sys.path.insert(
 def main():
     print(f"""Based on avaiable dataset please choose from the available list:
     1: Telecom Users
-    2:
+    2: GPU Information
     3: Car Sales
     4: Fantasy Football
     5: Exit Program""")
@@ -23,7 +24,7 @@ def main():
     if (choice == "1"):
         telecom_main()
     elif (choice == "2"):
-        pass
+        gpu_main()
     elif (choice == "3"):
         pass
     elif (choice == "4"):
