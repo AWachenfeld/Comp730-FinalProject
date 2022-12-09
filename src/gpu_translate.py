@@ -81,3 +81,41 @@ class Specs():
             print(value_df.head(25))
         elif (choice == "4"):
             print(value_df.head(50))
+
+    def gpu_PCIE_type(choice):
+        pd.set_option('display.expand_frame_repr', False)
+        df = pd.read_csv('../data/gpu_specs.csv')
+        df = pd.DataFrame.set_index(df, keys="productName")
+        df = df.drop('memBusWidth', axis=1)
+        df = df.drop('unifiedShader', axis=1)
+        df = df.drop('tmu', axis=1)
+        df = df.drop('rop', axis=1)
+        df = df.drop('pixelShader', axis=1)
+        df = df.drop('vertexShader', axis=1)
+        if (choice == "1"):
+            print(df['bus'].value_counts()["PCIe 4.0 x16"])
+            print(" GPUs Have PCIe 4.0 x16 as their PCIE type")
+        elif (choice == "2"):
+            print(df['bus'].value_counts()["PCIe 4.0 x8"])
+            print(" GPUs Have PCIe 4.0 x8 as their PCIE type")
+        elif (choice == "3"):
+            print(df['bus'].value_counts()["PCIe 4.0 x4"])
+            print(" GPUs Have PCIe 4.0 x4 as their PCIE type")
+        elif (choice == "4"):
+            print(df['bus'].value_counts()["PCIe 5.0 x16"])
+            print(" GPUs Have PCIe 5.0 x16 as their PCIE type")
+        elif (choice == "5"):
+            print(df['bus'].value_counts()["PCIe 3.0 x16"])
+            print(" GPUs Have PCIe 3.0 x16 as their PCIE type")
+        elif (choice == "6"):
+            print(df['bus'].value_counts()["PCIe 3.0 x8"])
+            print(" GPUs Have PCIe 3.0 x8 as their PCIE type")
+        elif (choice == "7"):
+            print(df['bus'].value_counts()["PCIe 3.0 x4"])
+            print(" GPUs Have PCIe 3.0 x4 as their PCIE type")
+        elif (choice == "8"):
+            print(df['bus'].value_counts()["Ring Bus"])
+            print(" GPUs Have Ring Bus as their PCIE type")
+        elif (choice == "9"):
+            print(df['bus'].value_counts()["IGP"])
+            print(" GPUs Have IGP as their PCIE type")
