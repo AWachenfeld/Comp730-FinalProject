@@ -59,3 +59,25 @@ class Benchmarks():
             print(value_df.head(25))
         elif (choice == "4"):
             print(value_df.head(50))
+
+class Specs():
+
+    def gpu_years(choice):
+        pd.set_option('display.expand_frame_repr', False)
+        df = pd.read_csv('../data/gpu_specs.csv')
+        df = pd.DataFrame.set_index(df, keys="productName")
+        df = df.drop('memBusWidth', axis=1)
+        df = df.drop('unifiedShader', axis=1)
+        df = df.drop('tmu', axis=1)
+        df = df.drop('rop', axis=1)
+        df = df.drop('pixelShader', axis=1)
+        df = df.drop('vertexShader', axis=1)
+        value_df = df.sort_values(by=["releaseYear"], ascending=False)
+        if (choice == "1"):
+            print(value_df.head(5))
+        elif (choice == "2"):
+            print(value_df.head(10))
+        elif (choice == "3"):
+            print(value_df.head(25))
+        elif (choice == "4"):
+            print(value_df.head(50))
