@@ -15,7 +15,8 @@ def gpu_main():
     3: Best price to performance GPUs
     4: Newest to Oldest GPU
     5: PCIE type occurances
-    6: Return to home""")
+    6: GPU memory type
+    7: Return to home""")
     gpu_choice = input("Enter num choice: ")
 
     if (gpu_choice == "1"):
@@ -83,7 +84,7 @@ def gpu_main():
             print("You choice was not valid. Returning to Telecom options menu.\n")
             gpu_main()
 
-    if (gpu_choice == "4"):
+    elif (gpu_choice == "4"):
         print(f"""How many would you like to see:
         1: 5 GPUs
         2: 10 GPUs
@@ -106,7 +107,7 @@ def gpu_main():
             print("You choice was not valid. Returning to Telecom options menu.\n")
             gpu_main()
 
-    if (gpu_choice == "5"):
+    elif (gpu_choice == "5"):
         print(f"""What PCIE Tye would you like to see the number of:
         1: PCIe 4.0 x16
         2: PCIe 4.0 x8
@@ -150,4 +151,51 @@ def gpu_main():
             gpu_main()
 
     elif (gpu_choice == "6"):
+        print(f"""What Memory Tye would you like to see the number of:
+        1: GDDR6
+        2: GDDR6X
+        3: GDDR5
+        4: GDDR5X
+        5: DDR4
+        6: DDR3
+        7: DDR2
+        8: System Shared
+        9: HBM2e
+        0: HBM2""")
+        specs_choice = input("Enter choice: ")
+        if (specs_choice == "1"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "2"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "3"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "4"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "5"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "6"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "7"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "8"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "9"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        elif (specs_choice == "0"):
+            Specs.gpu_memory_type(specs_choice)
+            gpu_main()
+        else:
+            print("You choice was not valid. Returning to Telecom options menu.\n")
+            gpu_main()
+
+    elif (gpu_choice == "7"):
         print("Thank You for using GPU Information\n")

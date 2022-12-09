@@ -119,3 +119,44 @@ class Specs():
         elif (choice == "9"):
             print(df['bus'].value_counts()["IGP"])
             print(" GPUs Have IGP as their PCIE type")
+
+    def gpu_memory_type(choice):
+        pd.set_option('display.expand_frame_repr', False)
+        df = pd.read_csv('../data/gpu_specs.csv')
+        df = pd.DataFrame.set_index(df, keys="productName")
+        df = df.drop('memBusWidth', axis=1)
+        df = df.drop('unifiedShader', axis=1)
+        df = df.drop('tmu', axis=1)
+        df = df.drop('rop', axis=1)
+        df = df.drop('pixelShader', axis=1)
+        df = df.drop('vertexShader', axis=1)
+        if (choice == "1"):
+            print(df['memType'].value_counts()["GDDR6"])
+            print(" GPUs Have GDDR6 as their PCIE type")
+        elif (choice == "2"):
+            print(df['memType'].value_counts()["GDDR6X"])
+            print(" GPUs Have GDDR6X as their PCIE type")
+        elif (choice == "3"):
+            print(df['memType'].value_counts()["GDDR5"])
+            print(" GPUs Have GDDR5 as their PCIE type")
+        elif (choice == "4"):
+            print(df['memType'].value_counts()["GDDR5X"])
+            print(" GPUs Have GDDR5X as their PCIE type")
+        elif (choice == "5"):
+            print(df['memType'].value_counts()["DDR4"])
+            print(" GPUs Have DDR4 as their PCIE type")
+        elif (choice == "6"):
+            print(df['memType'].value_counts()["DDR3"])
+            print(" GPUs Have DDR3 as their PCIE type")
+        elif (choice == "7"):
+            print(df['memType'].value_counts()["DDR2"])
+            print(" GPUs Have DDR2 as their PCIE type")
+        elif (choice == "8"):
+            print(df['memType'].value_counts()["System Shared"])
+            print(" GPUs Have System Shared as their PCIE type")
+        elif (choice == "9"):
+            print(df['memType'].value_counts()["HBM2e"])
+            print(" GPUs Have HBM2e as their PCIE type")
+        elif (choice == "0"):
+            print(df['memType'].value_counts()["HBM2"])
+            print(" GPUs Have HBM2 as their PCIE type")
