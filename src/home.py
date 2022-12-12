@@ -2,6 +2,7 @@ import os
 import sys
 from telecom_main import telecom_main
 from fantasy import fantasy_main
+from car_sales import car_main
 
 #from cars_main import cars_main
 #from fantasy_main import fantasy_main
@@ -25,7 +26,7 @@ def main():
     elif (choice == "2"):
         pass
     elif (choice == "3"):
-        pass
+        car_main()
     elif (choice == "4"):
         fantasy_main()
     elif (choice == "5"):
