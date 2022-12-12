@@ -1,5 +1,12 @@
 # Comp730-FinalProject Alex+Nathan
 
+## Overview of Class Diagram
+Diagram for Alex Contribution:
+![My Image](images/Alex.jpg)
+
+Diagram for Nathan Contribution:
+![My Image](images/Nathan.jpg)
+
 ## How to Run Project
 1. Clone repository, replace `[Forlder name]` with a name of your choice.
     ```
