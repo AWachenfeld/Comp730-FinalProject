@@ -2,10 +2,10 @@
 
 ## Overview of Class Diagram
 Diagram for Alex Contribution:
-![My Image](images/Alex.jpg)
+![My Image](images/Alex.JPG)
 
 Diagram for Nathan Contribution:
-![My Image](images/Nathan.jpg)
+![My Image](images/Nathan.JPG)
 
 ## How to Run Project
 1. Clone repository, replace `[Forlder name]` with a name of your choice.
