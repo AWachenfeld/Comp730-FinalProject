@@ -201,13 +201,13 @@ def games_injured():
     if(games == "1"):
         all = df.loc[df['Played'] == 17]
         print(all.head(50))
-    if(games == "2"):
+    elif(games == "2"):
         most = df.loc[df['Played'].isin([14, 15, 16])]
         print(most.head(50))
-    if(games == "3"):
+    elif(games == "3"):
         many = df.loc[df['Played'].isin([10, 11, 12, 13])]
         print(many)
-    if(games == "4"):
+    elif(games == "4"):
         least = df.loc[df['Played'] < 10]
         print(least)
     else:
